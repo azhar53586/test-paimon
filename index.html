@@ -43,6 +43,25 @@
 
   </div>
 </main>
+<!-- Image Popup Modal -->
+<div id="popup" class="popup" onclick="closePopup()">
+  <span class="close">&times;</span>
+  <img class="popup-content" id="popup-img">
+</div>
 
+<script>
+  // Open popup when image clicked
+  document.querySelectorAll('.product-card img').forEach(img => {
+    img.addEventListener('click', function() {
+      document.getElementById('popup').style.display = 'block';
+      document.getElementById('popup-img').src = this.src;
+    });
+  });
+
+  // Close popup
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+</script>
 </body>
 </html>
