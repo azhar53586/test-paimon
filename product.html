@@ -3,52 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Paimon Store - Products</title>
+  <title>Products | Paimon Store</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>Pimon Store - Products</h1>
+  <h1>Pimon Store</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="sold.html">Sold</a>
+  </nav>
 </header>
 
 <main>
+  <h2>Our Products</h2>
+
   <div class="product-grid">
     
+    <!-- Product 1 -->
     <div class="product-card">
       <img src="product1.jpg" alt="Product 1">
-      <div class="product-info">
-        <h3>Product 1</h3>
-        <p class="price">$10.99</p>
-        <button class="buy-btn" onclick="openPopup('Product 1', 'product1.jpg')">Buy Now</button>
-      </div>
+      <h3>Product Name 1</h3>
+      <p class="price">$50</p>
+      <a href="https://wa.me/(number here)?text=I'm interested in Product Name 1" class="buy-btn" target="_blank">Buy on WhatsApp</a>
     </div>
 
+    <!-- Product 2 -->
     <div class="product-card">
-      <img src="product2.jpg" alt="Product 2">
-      <div class="product-info">
-        <h3>Product 2</h3>
-        <p class="price">$15.99</p>
-        <button class="buy-btn" onclick="openPopup('Product 2', 'product2.jpg')">Buy Now</button>
-      </div>
+      <img src="img/product2.jpg" alt="Product 2">
+      <h3>Product Name 2</h3>
+      <p class="price">$30</p>
+      <a href="https://wa.me/(number here)?text=I'm interested in Product Name 2" class="buy-btn" target="_blank">Buy on WhatsApp</a>
     </div>
 
-    <!-- Add more products in same way -->
-
+    <!-- Add more products below -->
+    <!-- Copy and paste the product-card div and change the image/text -->
+  
   </div>
 </main>
 
-<!-- Popup Modal -->
-<div id="popup" class="popup">
-  <div class="popup-content">
-    <span class="close-btn" onclick="closePopup()">&times;</span>
-    <h2>Confirm Order</h2>
-    <img id="popup-image" src="" alt="Product" />
-    <p id="popup-product-name"></p>
-    <a id="whatsapp-link" class="confirm-btn" target="_blank">Confirm on WhatsApp</a>
-  </div>
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
