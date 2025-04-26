@@ -2,39 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PAIMON STOCKS</title>
-  <link rel="stylesheet" href="styles.css">
-<div style="position: absolute; top: 15px; right: -1px;">
-  <img src="logo.jpg" alt="Pimon Store Logo" style="height: 65px; width: 65px; border-radius: 50%; object-fit: cover;">
-</div>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paimon Store | Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>PAIMON STORE</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="sold.html">Sold</a>
-      <a href="admin.html" target="_blank">Admin</a>
-    </nav>
-  </header>
-  
-  <section class="products">
-    <div class="product">
-      <img src="product1.jpg" alt="Product 1">
-      <h2>Product 1</h2>
-      <p>Description of product 1.</p>
-      <a href="product.html?product=1">View Details</a>
-      
+
+<header>
+  <h1>Paimon Store</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="sold.html">Sold</a>
+    <a href="https://youtube.com/@zerefplaysgame?si=qA-HqmHYTwiAf6hZ" target="_blank">YouTube</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Welcome to Paimon Store</h2>
+
+  <div class="product-grid">
+
+    <!-- Featured Product 1 -->
+    <div class="product-card">
+      <img src="img/featured1.jpg" alt="Featured Product 1">
+      <h3>Featured Product 1</h3>
+      <p class="price">$99</p>
+      <a href="https://wa.me/918967557002?text=I'm interested in Featured Product 1" class="buy-btn" target="_blank">Buy on WhatsApp</a>
     </div>
-    <!-- Repeat for more products -->
-  </section>
 
-  <footer>
-    <p>Contact us via WhatsApp: <a href="https://wa.me/(+918967557002)" target="_blank">Chat with us</a></p>
-     <p>Our Youtube: <a href="https://youtube.com/@zerefplaysgame?si=qA-HqmHYTwiAf6hZ" target="_blank">Watch Now</a></p>
-  </footer>
+    <!-- Featured Product 2 -->
+    <div class="product-card">
+      <img src="img/featured2.jpg" alt="Featured Product 2">
+      <h3>Featured Product 2</h3>
+      <p class="price">$79</p>
+      <a href="https://wa.me/918967557002?text=I'm interested in Featured Product 2" class="buy-btn" target="_blank">Buy on WhatsApp</a>
+    </div>
 
-  <script src="script.js"></script>
+    <!-- Add more featured products here -->
+
+  </div>
+</main>
+
 </body>
 </html>
