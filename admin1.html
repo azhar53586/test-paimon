@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Panel - Pimon Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      padding: 20px;
+    }
+    h1 {
+      color: #007BFF;
+    }
+    input, button {
+      margin: 10px 0;
+      padding: 10px;
+      width: 100%;
+      font-size: 16px;
+    }
+    .product-list {
+      margin-top: 20px;
+    }
+    .product-item {
+      background: #e6f0ff;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Admin Panel</h1>
+
+<h2>Add New Product</h2>
+<input type="text" id="product-name" placeholder="Product Name">
+<input type="text" id="product-image" placeholder="Image URL">
+<button onclick="addProduct()">Add Product</button>
+
+<h2>Current Products</h2>
+<div id="product-list" class="product-list"></div>
+
+<script>
+// Array to store products
+let products = [];
+
+// Function to add product
+function addProduct() {
+  const name = document.getElementById('product-name').value;
+  const image = document.getElementById('product-image').value;
+
+  if (name && image) {
+    products.push({ name, image });
+    displayProducts();
+    document.getElementById('product-name').value = '';
+    document.getElementById('product-image').value = '';
+  } else {
+    alert('Please fill in both fields.');
+  }
+}
+
+// Function to display products
+function displayProducts() {
+  const productList = document.getElementById('product-list');
+  productList.innerHTML = '';
+
+  products.forEach((product, index) => {
+    productList.innerHTML += `
+      <div class="product-item">
+        <img src="${product.image}" alt="${product.name}" style="height:50px;">
+        <strong>${product.name}</strong>
+        <button onclick="deleteProduct(${index})" style="background:red;color:white;">Delete</button>
+      </div>
+    `;
+  });
+}
+
+// Function to delete product
+function deleteProduct(index) {
+  products.splice(index, 1);
+  displayProducts();
+}
+</script>
+
+</body>
+</html>
